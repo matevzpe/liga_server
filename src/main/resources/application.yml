@@ -1,0 +1,15 @@
+datasources:
+  default:
+    url: jdbc:postgresql://localhost:5432/postgres?preparedStatementCacheQueries=0
+    schema: nogometna_liga
+    driverClassName: org.postgresql.Driver
+    username: postgres
+    password: ligano
+    dialect: POSTGRES
+
+jpa:
+  default:
+    properties:
+      hibernate:
+      bytecode:
+      provider: none

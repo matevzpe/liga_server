@@ -3,4 +3,4 @@ defaultPackage: com.liga
 testFramework: junit
 sourceLanguage: java
 buildTool: gradle
-features: [app-name, data, data-hibernate-reactive, gradle, hibernate-jpa, http-client-test, jackson-databind, java, java-application, jdbc-hikari, junit, logback, micronaut-aot, micronaut-build, micronaut-http-validation, mysql, netty-server, openapi, properties, readme, serialization-jackson, shade, swagger-ui, test-resources]
+features: [app-name, gradle, http-client-test, java, java-application, junit, logback, micronaut-aot, micronaut-build, micronaut-http-validation, netty-server, properties, readme, serialization-jackson, shade]
