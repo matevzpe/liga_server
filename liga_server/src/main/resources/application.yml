@@ -1,0 +1,38 @@
+datasources:
+  default:
+    url: jdbc:postgresql://localhost:5432/postgres?preparedStatementCacheQueries=0
+    schema: nogometna_liga
+    driverClassName: org.postgresql.Driver
+    username: postgres
+    password: ligano
+    dialect: POSTGRES
+
+jpa:
+  default:
+    properties:
+      hibernate:
+      bytecode:
+      provider: none
+
+micronaut:
+  server:
+    cors:
+      enabled: true
+      single-header: true
+      configurations:
+        web:
+          allowed-origins:
+            - "http://localhost:5173"
+          allowedMethods:
+            - POST
+            - GET
+            - DELETE
+            - OPTIONS
+          allowedHeaders:
+            - "Content-Type"
+            - "Accept"
+            - "X-IndexLabs-Trace-Originating-Request-Id"
+            - "X-IndexLabs-Trace-Originating-Event-Id"
+            - "X-IndexLabs-Agent"
+          exposedHeaders:
+            - "Content-Type"
