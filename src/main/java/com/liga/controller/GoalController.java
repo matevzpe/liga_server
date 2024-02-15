@@ -14,7 +14,7 @@ public class GoalController {
     @Inject
     GoalRepository goalRepository;
 
-    /*@Post("/")
+    @Post("/")
     Goal save(@Body Goal goal) {
         try{
             Goal existingGoal = goalRepository.findById(goal.getId()).get();
@@ -22,7 +22,7 @@ public class GoalController {
         } catch (Exception e){
             return goalRepository.save(goal);
         }
-    }*/
+    }
 
     @Get("/{id}")
     Goal get(@PathVariable Long id){

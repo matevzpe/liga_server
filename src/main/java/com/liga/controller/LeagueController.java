@@ -14,7 +14,7 @@ public class LeagueController {
     @Inject
     LeagueRepository leagueRepository;
 
-    /*@Post("/")
+    @Post("/")
     League save(@Body League league) {
         try{
             League existingGoal = leagueRepository.findById(league.getId()).get();
@@ -22,7 +22,7 @@ public class LeagueController {
         } catch (Exception e){
             return leagueRepository.save(league);
         }
-    }*/
+    }
 
     @Get("/{id}")
     League get(@PathVariable Long id){

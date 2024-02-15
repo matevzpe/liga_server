@@ -23,11 +23,6 @@ micronaut:
         web:
           allowed-origins:
             - "http://localhost:5173"
-          allowedMethods:
-            - POST
-            - GET
-            - DELETE
-            - OPTIONS
           allowedHeaders:
             - "Content-Type"
             - "Accept"

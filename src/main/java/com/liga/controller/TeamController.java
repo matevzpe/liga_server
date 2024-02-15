@@ -14,7 +14,7 @@ public class TeamController {
     @Inject
     TeamRepository teamRepository;
 
-    /*@Post("/")
+    @Post("/")
     Team save(@Body Team team) {
         try{
             Team existingTeam = teamRepository.findById(team.getId()).get();
@@ -22,7 +22,7 @@ public class TeamController {
         } catch (Exception e){
             return teamRepository.save(team);
         }
-    }*/
+    }
 
 
     @Get("/{id}")

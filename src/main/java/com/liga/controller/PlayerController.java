@@ -14,7 +14,7 @@ public class PlayerController {
     @Inject
     PlayerRepository playerRepository;
 
-   /* @Post("/")
+    @Post("/")
     Player save(@Body Player player) {
         try{
             Player existingPlayer = playerRepository.findById(player.getId()).get();
@@ -22,7 +22,7 @@ public class PlayerController {
         } catch (Exception e){
             return playerRepository.save(player);
         }
-    }*/
+    }
 
     @Get("/{id}")
     Player get(@PathVariable Long id){

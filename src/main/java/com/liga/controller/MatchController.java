@@ -14,7 +14,7 @@ public class MatchController {
     @Inject
     MatchRepository matchRepository;
 
-    /*@Post("/")
+    @Post("/")
     Match save(@Body Match match) {
         try{
             Match existingMatch = matchRepository.findById(match.getId()).get();
@@ -22,7 +22,7 @@ public class MatchController {
         } catch (Exception e){
             return matchRepository.save(match);
         }
-    }*/
+    }
 
     @Get("/{id}")
     Match get(@PathVariable Long id){

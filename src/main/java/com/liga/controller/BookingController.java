@@ -14,15 +14,15 @@ public class BookingController {
     @Inject
     BookingRepository bookingRepository;
 
-    /*@Post("/")
-    Goal save(@Body Goal goal) {
+    @Post("/")
+    Booking save(@Body Booking booking) {
         try{
-            Goal existingGoal = goalRepository.findById(goal.getId()).get();
-            return goalRepository.update(goal);
+            Booking existingGoal = bookingRepository.findById(booking.getId()).get();
+            return bookingRepository.update(booking);
         } catch (Exception e){
-            return goalRepository.save(goal);
+            return bookingRepository.save(booking);
         }
-    }*/
+    }
 
     @Get("/{id}")
     Booking get(@PathVariable Long id){

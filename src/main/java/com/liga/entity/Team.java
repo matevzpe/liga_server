@@ -5,6 +5,7 @@
     import io.micronaut.data.annotation.Id;
     import io.micronaut.data.annotation.MappedEntity;
     import io.micronaut.serde.annotation.Serdeable;
+    import jakarta.persistence.Column;
     import lombok.Data;
     import lombok.NonNull;
 
@@ -15,20 +16,20 @@
 
         @Id
         @GeneratedValue(GeneratedValue.Type.AUTO)
-        Long TeamID;
+        @Column(name="id")
+        Long id;
 
         @NonNull
-        String TeamName;
+        String teamName;
 
-        String CoachName;
+        String coachName;
 
-        Integer FoundedYear;
+        Integer foundedYear;
 
-        String HomeGround;
+        String address;
 
-        String City;
+        String city;
 
-        String Country;
+        String country;
 
-        String LogoURL;
     }

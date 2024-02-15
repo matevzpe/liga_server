@@ -2,9 +2,10 @@ package com.liga.entity;
 
 import io.micronaut.core.annotation.Introspected;
 import io.micronaut.data.annotation.GeneratedValue;
-import io.micronaut.data.annotation.Id;
 import io.micronaut.data.annotation.MappedEntity;
 import io.micronaut.serde.annotation.Serdeable;
+import jakarta.persistence.Column;
+import jakarta.persistence.Id;
 import lombok.Data;
 import lombok.NonNull;
 
@@ -13,12 +14,14 @@ import java.time.LocalTime;
 
 @Serdeable
 @Introspected
-@MappedEntity(value = "Matches")
+@MappedEntity(value = "matches")
 public @Data class Match {
 
     @Id
     @GeneratedValue(GeneratedValue.Type.AUTO)
-    Long TeamID;
+    @Column(name="team_id")
+    Long id;
+
     @NonNull
     LocalDate Date;
     @NonNull

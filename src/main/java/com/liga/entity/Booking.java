@@ -5,6 +5,7 @@ import io.micronaut.data.annotation.GeneratedValue;
 import io.micronaut.data.annotation.Id;
 import io.micronaut.data.annotation.MappedEntity;
 import io.micronaut.serde.annotation.Serdeable;
+import jakarta.persistence.Column;
 import lombok.Data;
 import lombok.NonNull;
 
@@ -13,19 +14,18 @@ import java.time.LocalTime;
 @Serdeable
 @Introspected
 @MappedEntity(value = "Bookings")
-public @Data class Booking {
+@Data
+public  class Booking {
 
     @Id
     @GeneratedValue(GeneratedValue.Type.AUTO)
-    Long GoalID;
-    @NonNull
-    private Integer MatchID;
-    @NonNull
-    private Integer PlayerID;
-    @NonNull
-    private Integer TeamID;
+    @Column(name="booking_id")
+    Long id;
 
-    private String CardType;
+    @NonNull
+    private Integer matchId;
 
-    private LocalTime Time;
+    private String cardType;
+
+    private LocalTime time;
 }
